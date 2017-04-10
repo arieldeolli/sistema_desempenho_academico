@@ -30,8 +30,12 @@ import javafx.stage.Stage;
  *
  * @author matheus
  */
-public class Tela3FXMLController implements Initializable {
+public class Tela3FXMLController extends InterfaceUsuario {
 
+    public Tela3FXMLController(){
+        super("Tela3FXML.fxml");
+    }
+    
     @FXML
     private AnchorPane elementoRaiz;
     
@@ -57,7 +61,10 @@ public class Tela3FXMLController implements Initializable {
     
     @FXML 
     public void voltarParaTela1() throws IOException {
-        //carrega o elemento raiz do FXML da tela que será aberta
+        
+        GerenciadorJanela.obterInstancia().voltar();
+
+      /*  //carrega o elemento raiz do FXML da tela que será aberta
         AnchorPane elementoRaizFXML1 = FXMLLoader.load(getClass().getResource("Tela1FXML.fxml"));
         
         //cria uma nova cena, passando para o construtor o elemento raiz do FXML que será aberto
@@ -72,7 +79,7 @@ public class Tela3FXMLController implements Initializable {
         //atribuindo a nova cena, criada no início do método, ao palco da aplicação
         palcoDaAplicacao.setScene(novaCena);
         
-        palcoDaAplicacao.setTitle("Dashboard");
+        palcoDaAplicacao.setTitle("Dashboard");   */
     }
     
 }

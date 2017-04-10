@@ -26,8 +26,12 @@ import javafx.stage.Stage;
  *
  * @author matheus
  */
-public class Tela2FXMLController implements Initializable {
+public class Tela2FXMLController extends InterfaceUsuario {
 
+    public Tela2FXMLController(){
+        super("Tela2FXML.fxml");
+    }
+    
     @FXML
     private Button informaNota, adicionaAvaliacao, voltaTela1;
     
@@ -45,7 +49,11 @@ public class Tela2FXMLController implements Initializable {
     
     @FXML
     public void irParaTela4() throws IOException {
-        //carrega o elemento raiz do FXML da tela que será aberta
+        
+        Tela4FXMLController tela4 = new Tela4FXMLController();
+        GerenciadorJanela.obterInstancia().abreJanela(tela4);   
+
+      /*  //carrega o elemento raiz do FXML da tela que será aberta
         AnchorPane elementoRaizFXML4 = FXMLLoader.load(getClass().getResource("Tela4FXML.fxml"));
         
         //cria uma nova cena, passando para o construtor o elemento raiz do FXML que será aberto
@@ -60,12 +68,16 @@ public class Tela2FXMLController implements Initializable {
         //atribuindo a nova cena, criada no início do método, ao palco da aplicação
         palcoDaAplicacao.setScene(novaCena);
         
-        palcoDaAplicacao.setTitle("Informar nota");
+        palcoDaAplicacao.setTitle("Informar nota");  */
     }
     
     @FXML
     public void irParaTela5() throws IOException {
-        //carrega o elemento raiz do FXML da tela que será aberta
+        
+        Tela5FXMLController tela5 = new Tela5FXMLController();
+        GerenciadorJanela.obterInstancia().abreJanela(tela5);
+
+      /*  //carrega o elemento raiz do FXML da tela que será aberta
         AnchorPane elementoRaizFXML5 = FXMLLoader.load(getClass().getResource("Tela5FXML.fxml"));
         
         //cria uma nova cena, passando para o construtor o elemento raiz do FXML que será aberto
@@ -80,12 +92,15 @@ public class Tela2FXMLController implements Initializable {
         //atribuindo a nova cena, criada no início do método, ao palco da aplicação
         palcoDaAplicacao.setScene(novaCena);
         
-        palcoDaAplicacao.setTitle("Adicionar nova avaliacao");
+        palcoDaAplicacao.setTitle("Adicionar nova avaliacao");  */
     }
     
     @FXML 
     public void voltarParaTela1() throws IOException {
-        //carrega o elemento raiz do FXML da tela que será aberta
+        
+        GerenciadorJanela.obterInstancia().voltar();
+
+      /*  //carrega o elemento raiz do FXML da tela que será aberta
         AnchorPane elementoRaizFXML1 = FXMLLoader.load(getClass().getResource("Tela1FXML.fxml"));
         
         //cria uma nova cena, passando para o construtor o elemento raiz do FXML que será aberto
@@ -100,6 +115,6 @@ public class Tela2FXMLController implements Initializable {
         //atribuindo a nova cena, criada no início do método, ao palco da aplicação
         palcoDaAplicacao.setScene(novaCena);
         
-        palcoDaAplicacao.setTitle("Dashboard");
+        palcoDaAplicacao.setTitle("Dashboard");  */
     }
 }

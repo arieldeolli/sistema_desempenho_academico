@@ -19,8 +19,12 @@ import javafx.stage.Stage;
 public class JavaFXTrocaTelas1 extends Application {
     
     @Override
-    public void start(Stage stage) throws Exception {
-        AnchorPane elementoRaiz = FXMLLoader.load(getClass().getResource("Tela1FXML.fxml"));
+    public void start(Stage palco) throws Exception {
+       
+        Tela1FXMLController tela1 = new Tela1FXMLController();
+        GerenciadorJanela.obterInstancia().inicializaPalco(palco, tela1);
+                
+        /*AnchorPane elementoRaiz = FXMLLoader.load(getClass().getResource("Tela1FXML.fxml"));
         
         Scene cena1 = new Scene(elementoRaiz);
         
@@ -29,25 +33,8 @@ public class JavaFXTrocaTelas1 extends Application {
         stage.show();
         
         stage.setTitle("Dashboard");
-        
-        /*Button btn = new Button();
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-            
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
-            }
-        });
-        
-        StackPane root = new StackPane();
-        root.getChildren().add(btn);
-        
-        Scene scene = new Scene(root, 300, 250);
-        
-        stage.setTitle("Hello World!");
-        stage.setScene(scene);
-        stage.show();*/
+        */
+     
     }
 
     /**

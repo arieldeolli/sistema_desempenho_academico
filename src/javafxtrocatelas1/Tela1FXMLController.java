@@ -19,8 +19,12 @@ import javafx.stage.Stage;
  *
  * @author matheus
  */
-public class Tela1FXMLController implements Initializable {
+public class Tela1FXMLController extends InterfaceUsuario {
 
+    public Tela1FXMLController(){
+        super("Tela1FXML.fxml");
+    }
+    
     @FXML
     private Button minhasAvaliacoes, meuDesempenho;
     
@@ -34,7 +38,11 @@ public class Tela1FXMLController implements Initializable {
     
     @FXML 
     public void irParaTela2() throws IOException {
-        //carrega o elemento raiz do FXML da tela que será aberta
+        
+        Tela2FXMLController tela2 = new Tela2FXMLController();
+        GerenciadorJanela.obterInstancia().abreJanela(tela2);
+
+       /* //carrega o elemento raiz do FXML da tela que será aberta
         AnchorPane elementoRaizFXML2 = FXMLLoader.load(getClass().getResource("Tela2FXML.fxml"));
         
         //cria uma nova cena, passando para o construtor o elemento raiz do FXML que será aberto
@@ -49,12 +57,16 @@ public class Tela1FXMLController implements Initializable {
         //atribuindo a nova cena, criada no início do método, ao palco da aplicação
         palcoDaAplicacao.setScene(novaCena);
         
-        palcoDaAplicacao.setTitle("Minhas avaliacoes");
+        palcoDaAplicacao.setTitle("Minhas avaliacoes"); */
     }
     
     @FXML
     public void irParaTela3() throws IOException {
-        //carrega o elemento raiz do FXML da tela que será aberta
+       
+        Tela3FXMLController tela3 = new Tela3FXMLController();
+        GerenciadorJanela.obterInstancia().abreJanela(tela3);
+
+      /*  //carrega o elemento raiz do FXML da tela que será aberta
         AnchorPane elementoRaizFXML3 = FXMLLoader.load(getClass().getResource("Tela3FXML.fxml"));
         
         //cria uma nova cena, passando para o construtor o elemento raiz do FXML que será aberto
@@ -69,6 +81,6 @@ public class Tela1FXMLController implements Initializable {
         //atribuindo a nova cena, criada no início do método, ao palco da aplicação
         palcoDaAplicacao.setScene(novaCena);
         
-        palcoDaAplicacao.setTitle("Meu desempenho");
+        palcoDaAplicacao.setTitle("Meu desempenho"); */
     }
 }
