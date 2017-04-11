@@ -4,16 +4,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="elementoRaiz" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxtrocatelas1.Tela1FXMLController">
+<AnchorPane id="AnchorPane" fx:id="elementoRaiz" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxtrocatelas1.Tela1FXMLController">
    <children>
-      <Button id="minhasAvaliacoes" fx:id="minhasAvaliacoes" layoutX="161.0" layoutY="88.0" mnemonicParsing="false" onAction="#irParaTela2" prefHeight="56.0" prefWidth="279.0" text="Minhas Avaliações">
+      <Button id="minhasAvaliacoes" fx:id="minhasAvaliacoes" layoutX="254.0" layoutY="204.0" mnemonicParsing="false" onAction="#irParaTela2" prefHeight="102.0" prefWidth="498.0" text="Minhas Avaliações">
          <font>
-            <Font size="18.0" />
+            <Font size="48.0" />
          </font>
       </Button>
-      <Button id="meuDesempenho" fx:id="meuDesempenho" layoutX="161.0" layoutY="200.0" mnemonicParsing="false" onAction="#irParaTela3" prefHeight="56.0" prefWidth="279.0" text="Meu Desempenho">
+      <Button id="meuDesempenho" fx:id="meuDesempenho" layoutX="254.0" layoutY="360.0" mnemonicParsing="false" onAction="#irParaTela3" prefHeight="102.0" prefWidth="498.0" text="Meu Desempenho">
          <font>
-            <Font size="18.0" />
+            <Font size="48.0" />
          </font>
       </Button>
    </children>

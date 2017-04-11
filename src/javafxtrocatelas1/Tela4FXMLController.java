@@ -5,6 +5,8 @@
  */
 package javafxtrocatelas1;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Calendar;
@@ -74,8 +76,28 @@ public class Tela4FXMLController extends InterfaceUsuario {
     }
     
     @FXML
-    private void pegaNota() throws IOException{
-        Double nota = Double.parseDouble(campoNota.getText());
+    private String pegaNota() throws IOException{
+        String nota = campoNota.getText();
+        //Double nota = Double.parseDouble(campoNota.getText());  
+        return nota;
     }
     
+    //Modificar para gravar a nota no final da linha
+    @FXML
+    private void salvarNota() throws IOException{
+        if(!arquivo1.exists()){
+            arquivo1.createNewFile();
+        }
+        FileWriter escritor = new FileWriter(arquivo1, true);
+        
+        BufferedWriter gravador = new BufferedWriter(escritor);
+        
+        gravador.write(pegaNota());
+        gravador.newLine();
+        
+        gravador.close();
+        escritor.close();
+        
+        voltarParaTela2();
+    }
 }

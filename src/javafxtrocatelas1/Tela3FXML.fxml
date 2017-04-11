@@ -5,17 +5,27 @@
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="elementoRaiz" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxtrocatelas1.Tela3FXMLController">
+<AnchorPane id="AnchorPane" fx:id="elementoRaiz" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxtrocatelas1.Tela3FXMLController">
    <children>
-      <BarChart fx:id="tabela" layoutX="50.0" layoutY="14.0" legendSide="LEFT" legendVisible="false" prefHeight="307.0" prefWidth="500.0" title="Meu desempenho em cada disciplina e cada media.">
+      <BarChart fx:id="tabela" layoutX="57.0" layoutY="21.0" legendSide="LEFT" legendVisible="false" prefHeight="620.0" prefWidth="928.0" title="Meu desempenho em cada disciplina e cada media.">
         <xAxis>
-          <CategoryAxis label="Materias" side="BOTTOM" fx:id="x" />
+          <CategoryAxis label="Materias" side="BOTTOM" fx:id="x">
+               <tickLabelFont>
+                  <Font size="14.0" />
+               </tickLabelFont></CategoryAxis>
         </xAxis>
         <yAxis>
-          <NumberAxis fx:id="y" label="Minha nota" side="LEFT" />
+          <NumberAxis fx:id="y" label="Minha nota" side="LEFT">
+               <tickLabelFont>
+                  <Font size="14.0" />
+               </tickLabelFont></NumberAxis>
         </yAxis>
       </BarChart>
-      <Button fx:id="voltaTela1" layoutX="64.0" layoutY="351.0" mnemonicParsing="false" onAction="#voltarParaTela1" prefHeight="29.0" prefWidth="117.0" text="Voltar" />
+      <Button fx:id="voltaTela1" layoutX="75.0" layoutY="651.0" mnemonicParsing="false" onAction="#voltarParaTela1" prefHeight="48.0" prefWidth="180.0" text="Voltar">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
    </children>
 </AnchorPane>

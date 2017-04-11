@@ -5,6 +5,7 @@
  */
 package javafxtrocatelas1;
 
+import java.io.File;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -34,6 +35,7 @@ public class JavaFXTrocaTelas1 extends Application {
         
         stage.setTitle("Dashboard");
         */
+        
      
     }
 

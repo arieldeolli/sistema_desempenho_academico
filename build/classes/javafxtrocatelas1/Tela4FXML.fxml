@@ -6,34 +6,36 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" fx:id="elementoRaiz" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="javafxtrocatelas1.Tela4FXMLController">
+<AnchorPane id="AnchorPane" fx:id="elementoRaiz" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxtrocatelas1.Tela4FXMLController">
    <children>
-      <Label fx:id="label1" layoutX="58.0" layoutY="37.0" prefHeight="17.0" prefWidth="337.0" text="Nome: Prova Banco de Dados">
+      <Label fx:id="label1" layoutX="78.0" layoutY="52.0" prefHeight="35.0" prefWidth="672.0" text="Nome: Prova Banco de Dados">
          <font>
-            <Font size="18.0" />
+            <Font size="24.0" />
          </font>
       </Label>
-      <Label fx:id="label2" layoutX="58.0" layoutY="64.0" prefHeight="17.0" prefWidth="337.0" text="Disciplina: Banco de dados">
+      <Label fx:id="label2" layoutX="78.0" layoutY="104.0" prefHeight="35.0" prefWidth="672.0" text="Disciplina: Banco de dados">
          <font>
-            <Font size="18.0" />
+            <Font size="24.0" />
          </font>
       </Label>
-      <Label fx:id="label3" layoutX="58.0" layoutY="91.0" prefHeight="17.0" prefWidth="337.0" text="Media: M1">
+      <Label fx:id="label3" layoutX="78.0" layoutY="160.0" prefHeight="35.0" prefWidth="337.0" text="Media: M1">
          <font>
-            <Font size="18.0" />
+            <Font size="24.0" />
          </font>
       </Label>
-      <Label fx:id="label4" layoutX="58.0" layoutY="170.0" prefHeight="20.0" prefWidth="100.0" text="Minha nota:">
+      <Label fx:id="label4" layoutX="78.0" layoutY="218.0" prefHeight="35.0" prefWidth="161.0" text="Minha nota:">
          <font>
-            <Font size="14.0" />
+            <Font size="24.0" />
          </font>
       </Label>
-      <TextField id="nota" fx:id="campoNota" layoutX="58.0" layoutY="190.0" prefHeight="25.0" prefWidth="172.0" />
-      <Button fx:id="voltaTela2" layoutX="50.0" layoutY="335.0" mnemonicParsing="false" onAction="#voltarParaTela2" prefHeight="29.0" prefWidth="117.0" text="Voltar" />
-      <Button fx:id="salvaTela4" layoutX="395.0" layoutY="251.0" mnemonicParsing="false" onAction="#voltarParaTela2" prefHeight="39.0" prefWidth="127.0" text="Salvar">
+      <TextField id="nota" fx:id="campoNota" layoutX="79.0" layoutY="260.0" prefHeight="39.0" prefWidth="172.0" />
+      <Button fx:id="voltaTela2" layoutX="75.0" layoutY="651.0" mnemonicParsing="false" onAction="#voltarParaTela2" prefHeight="48.0" prefWidth="180.0" text="Voltar">
          <font>
-            <Font size="18.0" />
+            <Font size="24.0" />
+         </font></Button>
+      <Button fx:id="salvaTela4" layoutX="631.0" layoutY="609.0" mnemonicParsing="false" onAction="#salvarNota" prefHeight="64.0" prefWidth="282.0" text="Salvar">
+         <font>
+            <Font size="36.0" />
          </font>
       </Button>
    </children>

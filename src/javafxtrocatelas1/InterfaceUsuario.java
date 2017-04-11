@@ -1,6 +1,7 @@
 
 package javafxtrocatelas1;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -18,6 +19,8 @@ public abstract class InterfaceUsuario implements Initializable{
     private Scene minhaCena;
     private String caminhoFxml;
     
+    File arquivo1 = new File("ListaProvas.txt");
+    
     protected InterfaceUsuario(String caminhoFxml) {
         this.caminhoFxml = caminhoFxml;
     }
@@ -34,5 +37,7 @@ public abstract class InterfaceUsuario implements Initializable{
         }
         return this.minhaCena;
     }
+   
+    
     
 }

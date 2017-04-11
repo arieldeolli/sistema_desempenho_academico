@@ -5,6 +5,8 @@
  */
 package javafxtrocatelas1;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Calendar;
@@ -23,6 +25,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+
 
 /**
  * FXML Controller class
@@ -85,25 +88,46 @@ public class Tela5FXMLController extends InterfaceUsuario {
     }
     
     @FXML
-    private void pegaNomeProva() throws IOException{
+    private String pegaNomeProva() throws IOException{
         String nomeProva = campoNome.getText();
+        return nomeProva;
     }
     
     @FXML
-    private void pegaPeso() throws IOException{
-        Double pesoProva = Double.parseDouble(campoPeso.getText());
-        System.out.println(pesoProva);
+    private String pegaPeso() throws IOException{
+        String pesoProva = campoPeso.getText();        
+        //Double pesoProva = Double.parseDouble(campoPeso.getText());
+        return pesoProva;
     }
     
     @FXML
-    private void pegaDisciplina() throws IOException{
+    private String pegaDisciplina() throws IOException{
         String disc = campoDisciplina.getValue();
+        return disc;
     }
     
     @FXML
-    private void pegaMedia() throws IOException{
+    private String pegaMedia() throws IOException{
         String media = campoMedia.getValue();
+        return media;
     }
    
-    
+    @FXML
+    private void salvarProva() throws IOException{
+        if(!arquivo1.exists()){
+            arquivo1.createNewFile();
+        }
+        FileWriter escritor = new FileWriter(arquivo1, true);
+        
+        BufferedWriter gravador = new BufferedWriter(escritor);
+        
+        gravador.write(pegaDisciplina()+","+pegaMedia()+","+pegaNomeProva()+","+pegaPeso());
+        gravador.newLine();
+        
+        gravador.close();
+        escritor.close();
+        
+        voltarParaTela2();
+    }
+        
 }

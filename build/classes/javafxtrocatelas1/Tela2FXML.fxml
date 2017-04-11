@@ -6,28 +6,30 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" fx:id="elementoRaiz" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="javafxtrocatelas1.Tela2FXMLController">
+<AnchorPane id="AnchorPane" fx:id="elementoRaiz" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxtrocatelas1.Tela2FXMLController">
    <children>
-      <Button fx:id="informaNota" layoutX="103.0" layoutY="30.0" mnemonicParsing="false" onAction="#irParaTela4" prefHeight="36.0" prefWidth="189.0" text="Informar nota">
+      <Button fx:id="informaNota" layoutX="228.0" layoutY="25.0" mnemonicParsing="false" onAction="#irParaTela4" prefHeight="36.0" prefWidth="189.0" text="Informar nota">
          <font>
-            <Font size="14.0" />
+            <Font size="24.0" />
          </font>
       </Button>
-      <Button fx:id="adicionaAvaliacao" layoutX="319.0" layoutY="30.0" mnemonicParsing="false" onAction="#irParaTela5" prefHeight="36.0" prefWidth="189.0" text="Adicionar nova avaliacao">
+      <Button fx:id="adicionaAvaliacao" layoutX="542.0" layoutY="25.0" mnemonicParsing="false" onAction="#irParaTela5" prefHeight="51.0" prefWidth="321.0" text="Adicionar nova avaliacao">
          <font>
-            <Font size="14.0" />
+            <Font size="24.0" />
          </font>
       </Button>
-      <TableView fx:id="tabela" layoutX="54.0" layoutY="89.0" prefHeight="226.0" prefWidth="505.0">
+      <TableView fx:id="tabela" layoutX="54.0" layoutY="89.0" prefHeight="534.0" prefWidth="913.0">
         <columns>
-          <TableColumn prefWidth="136.0" text="Nome" />
-          <TableColumn prefWidth="135.0" text="Disciplina" />
-            <TableColumn prefWidth="83.0" text="Média" />
-            <TableColumn prefWidth="66.0" text="Peso" />
-            <TableColumn prefWidth="83.0" text="Minha nota " />
+          <TableColumn prefWidth="332.0" text="Nome" />
+          <TableColumn minWidth="0.0" prefWidth="294.0" text="Disciplina" />
+            <TableColumn prefWidth="93.3333740234375" text="Média" />
+            <TableColumn prefWidth="85.3333740234375" text="Peso" />
+            <TableColumn prefWidth="114.0" text="Minha nota " />
         </columns>
       </TableView>
-      <Button fx:id="voltaTela1" layoutX="54.0" layoutY="341.0" mnemonicParsing="false" onAction="#voltarParaTela1" prefHeight="29.0" prefWidth="117.0" text="Voltar" />
+      <Button fx:id="voltaTela1" layoutX="75.0" layoutY="651.0" mnemonicParsing="false" onAction="#voltarParaTela1" prefHeight="48.0" prefWidth="180.0" text="Voltar">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
    </children>
 </AnchorPane>
