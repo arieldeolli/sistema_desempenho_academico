@@ -73,4 +73,9 @@ public class Tela4FXMLController extends InterfaceUsuario {
         palcoDaAplicacao.setTitle("Minhas avaliacoes");  */
     }
     
+    @FXML
+    private void pegaNota() throws IOException{
+        Double nota = Double.parseDouble(campoNota.getText());
+    }
+    
 }

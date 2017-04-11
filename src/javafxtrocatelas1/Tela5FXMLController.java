@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Calendar;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -40,18 +42,25 @@ public class Tela5FXMLController extends InterfaceUsuario {
     private TextField campoNome, campoPeso;
 
     @FXML
-    private ChoiceBox<?> campoDisciplina, campoMedia;
+    private ChoiceBox<String> campoDisciplina, campoMedia;
 
     @FXML
     private Button voltaTela2, salvaTela5;
     
-    
+    ObservableList<String> listaDisciplinas = FXCollections.observableArrayList("ÉTICA EM INFORMÁTICA", "MATEMÁTICA COMPUTACIONAL", "ALGORITMOS E PROGRAMAÇÃO", "ÁLGEBRA", "INTRODUÇÃO AO CÁLCULO", "INICIAÇÃO TÉCNICO-CIENTÍFICA", "INTRODUÇÃO A ENGENHARIA DE COMPUTAÇÃO", "INTRODUÇÃO À FÍSICA");
    
+    ObservableList<String> listaMedias = FXCollections.observableArrayList("M1", "M2", "M3");
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        
+        campoDisciplina.setValue("INTRODUÇÃO À FÍSICA");
+        campoDisciplina.setItems(listaDisciplinas);
+        
+        campoMedia.setValue("M1");
+        campoMedia.setItems(listaMedias);
     }    
-    
+       
     @FXML 
     public void voltarParaTela2() throws IOException {
         
@@ -74,5 +83,27 @@ public class Tela5FXMLController extends InterfaceUsuario {
         
         palcoDaAplicacao.setTitle("Minhas avaliacoes");  */
     }
+    
+    @FXML
+    private void pegaNomeProva() throws IOException{
+        String nomeProva = campoNome.getText();
+    }
+    
+    @FXML
+    private void pegaPeso() throws IOException{
+        Double pesoProva = Double.parseDouble(campoPeso.getText());
+        System.out.println(pesoProva);
+    }
+    
+    @FXML
+    private void pegaDisciplina() throws IOException{
+        String disc = campoDisciplina.getValue();
+    }
+    
+    @FXML
+    private void pegaMedia() throws IOException{
+        String media = campoMedia.getValue();
+    }
+   
     
 }
