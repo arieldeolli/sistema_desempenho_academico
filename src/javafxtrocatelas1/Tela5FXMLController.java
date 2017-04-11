@@ -50,7 +50,9 @@ public class Tela5FXMLController extends InterfaceUsuario {
     @FXML
     private Button voltaTela2, salvaTela5;
     
-    ObservableList<String> listaDisciplinas = FXCollections.observableArrayList("ÉTICA EM INFORMÁTICA", "MATEMÁTICA COMPUTACIONAL", "ALGORITMOS E PROGRAMAÇÃO", "ÁLGEBRA", "INTRODUÇÃO AO CÁLCULO", "INICIAÇÃO TÉCNICO-CIENTÍFICA", "INTRODUÇÃO A ENGENHARIA DE COMPUTAÇÃO", "INTRODUÇÃO À FÍSICA");
+    ObservableList<String> listaDisciplinas = FXCollections.observableArrayList("ÉTICA EM INFORMÁTICA", "MATEMÁTICA COMPUTACIONAL", "ALGORITMOS E PROGRAMAÇÃO", "ÁLGEBRA", "INTRODUÇÃO AO CÁLCULO", "INICIAÇÃO TÉCNICO-CIENTÍFICA", "INTRODUÇÃO A ENGENHARIA DE COMPUTAÇÃO", "INTRODUÇÃO À FÍSICA",
+    "CÁLCULO", "ALGORITMOS E PROGRAMAÇÃO", "CIRCUITOS DIGITAIS", "DESENHO TÉCNICO", "FÍSICA GERAL", "ÁLGEBRA",
+    "");
    
     ObservableList<String> listaMedias = FXCollections.observableArrayList("M1", "M2", "M3");
     
@@ -89,8 +91,18 @@ public class Tela5FXMLController extends InterfaceUsuario {
     
     @FXML
     private String pegaNomeProva() throws IOException{
-        String nomeProva = campoNome.getText();
-        return nomeProva;
+        /*if(campoNome.getText()== null){
+            Alert dialogoErro = new Alert(Alert.AlertType.ERROR);
+            dialogoErro.setTitle("Erro");
+            dialogoErro.setHeaderText("CAMPO PROVA VAZIO!!!");
+            dialogoErro.setContentText("É necessário nomear a prova");
+            return dialogoErro.showAndWait();
+            
+        }else{*/
+            String nomeProva = campoNome.getText();
+            return nomeProva;
+        
+       
     }
     
     @FXML

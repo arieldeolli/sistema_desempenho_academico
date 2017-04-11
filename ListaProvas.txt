@@ -1,3 +1,5 @@
 ALGORITMOS E PROGRAMAÇÃO,M1,Prova de Programacao,2
 INTRODUÇÃO À FÍSICA,M3,Fisica,5.2
 10
+INTRODUÇÃO À FÍSICA,M1,,
+INTRODUÇÃO À FÍSICA,M1,,

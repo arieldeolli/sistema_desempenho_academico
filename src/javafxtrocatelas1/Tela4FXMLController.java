@@ -93,7 +93,6 @@ public class Tela4FXMLController extends InterfaceUsuario {
         BufferedWriter gravador = new BufferedWriter(escritor);
         
         gravador.write(pegaNota());
-        gravador.newLine();
         
         gravador.close();
         escritor.close();
