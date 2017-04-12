@@ -27,6 +27,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+//import javafxtrocatelas1.Prova;
 
 /**
  * FXML Controller class
@@ -45,15 +46,15 @@ public class Tela2FXMLController extends InterfaceUsuario {
     private Button informaNota, adicionaAvaliacao, voltaTela1;
     
     @FXML
-    private TableView<?> tabela;
+    private TableView<Prova> tabela;
         
     @FXML
-    private TableColumn<?,String> colNome, colDisc, colMedia, colPeso, colNota;
+    private TableColumn<Prova,String> colNome, colDisc, colMedia, colPeso, colNota;
     
     @FXML
     private AnchorPane elementoRaiz;
     
-    private List listaConteudoTabela = new ArrayList<>();
+    private List listaConteudoTabela = new ArrayList<Prova>();
       
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -63,8 +64,7 @@ public class Tela2FXMLController extends InterfaceUsuario {
             
             while (leitorLin.ready()) {
                 String linha = leitorLin.readLine();
-                listaConteudoTabela = linha;
-            
+                listaConteudoTabela = new Prova(linha); //PAREI AQUI!!!!!!!!!!
             }
              leitorLin.close();
             leitor.close();
