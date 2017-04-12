@@ -50,16 +50,16 @@ public class Tela5FXMLController extends InterfaceUsuario {
     @FXML
     private Button voltaTela2, salvaTela5;
     
-    ObservableList<String> listaDisciplinas = FXCollections.observableArrayList("ÉTICA EM INFORMÁTICA", "MATEMÁTICA COMPUTACIONAL", "ALGORITMOS E PROGRAMAÇÃO", "ÁLGEBRA", "INTRODUÇÃO AO CÁLCULO", "INICIAÇÃO TÉCNICO-CIENTÍFICA", "INTRODUÇÃO A ENGENHARIA DE COMPUTAÇÃO", "INTRODUÇÃO À FÍSICA",
-    "CÁLCULO", "ALGORITMOS E PROGRAMAÇÃO", "CIRCUITOS DIGITAIS", "DESENHO TÉCNICO", "FÍSICA GERAL", "ÁLGEBRA",
-    "");
+    ObservableList<String> listaDisciplinas = FXCollections.observableArrayList("[1]ÉTICA EM INFORMÁTICA", "[1]MATEMÁTICA COMPUTACIONAL", "[1]ALGORITMOS E PROGRAMAÇÃO", "[1]ÁLGEBRA", "[1]INTRODUÇÃO AO CÁLCULO", "[1]INICIAÇÃO TÉCNICO-CIENTÍFICA", "[1]INTRODUÇÃO A ENGENHARIA DE COMPUTAÇÃO", "[1]INTRODUÇÃO À FÍSICA",
+    "[2]CÁLCULO", "[2]ALGORITMOS E PROGRAMAÇÃO", "[2]CIRCUITOS DIGITAIS", "[2]DESENHO TÉCNICO", "[2]FÍSICA GERAL", "[2]ÁLGEBRA"
+    );
    
     ObservableList<String> listaMedias = FXCollections.observableArrayList("M1", "M2", "M3");
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-        campoDisciplina.setValue("INTRODUÇÃO À FÍSICA");
+        campoDisciplina.setValue("[1]INTRODUÇÃO À FÍSICA");
         campoDisciplina.setItems(listaDisciplinas);
         
         campoMedia.setValue("M1");
@@ -91,18 +91,17 @@ public class Tela5FXMLController extends InterfaceUsuario {
     
     @FXML
     private String pegaNomeProva() throws IOException{
-        /*if(campoNome.getText()== null){
+        if(campoNome.getText().equals("")){
             Alert dialogoErro = new Alert(Alert.AlertType.ERROR);
             dialogoErro.setTitle("Erro");
             dialogoErro.setHeaderText("CAMPO PROVA VAZIO!!!");
             dialogoErro.setContentText("É necessário nomear a prova");
-            return dialogoErro.showAndWait();
+            dialogoErro.showAndWait();
+            // Como parar aqui?
+        }
+        String nomeProva = campoNome.getText();
+        return nomeProva;
             
-        }else{*/
-            String nomeProva = campoNome.getText();
-            return nomeProva;
-        
-       
     }
     
     @FXML

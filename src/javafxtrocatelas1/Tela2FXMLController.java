@@ -5,10 +5,16 @@
  */
 package javafxtrocatelas1;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -16,6 +22,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -32,20 +39,42 @@ public class Tela2FXMLController extends InterfaceUsuario {
         super("Tela2FXML.fxml");
     }
     
+    
+    
     @FXML
     private Button informaNota, adicionaAvaliacao, voltaTela1;
     
     @FXML
-    private TableView tabela;
+    private TableView<?> tabela;
         
+    @FXML
+    private TableColumn<?,String> colNome, colDisc, colMedia, colPeso, colNota;
+    
     @FXML
     private AnchorPane elementoRaiz;
     
+    private List listaConteudoTabela = new ArrayList<>();
       
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        try {
+            FileReader leitor = new FileReader(arquivo1);
+            BufferedReader leitorLin = new BufferedReader(leitor);
+            
+            while (leitorLin.ready()) {
+                String linha = leitorLin.readLine();
+                listaConteudoTabela = linha;
+            
+            }
+             leitorLin.close();
+            leitor.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        // ObservableList conteudo = FXCollections.observableArrayList(listaConteudoTabela);   <- Inicio da insercao na tabela
+       // tabela.setItems(conteudo); 
     }    
+    
     
     @FXML
     public void irParaTela4() throws IOException {
